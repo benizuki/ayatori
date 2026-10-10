@@ -1,0 +1,54 @@
+{
+  "initialDepartmentIds": {
+    "accounting": "7f3a9c21",
+    "hr": "b4e18d62",
+    "procurement": "2c8f5a97",
+    "it": "d16b40e3"
+  },
+  "departments": [
+    {
+      "id": "7f3a9c21",
+      "name": "経理・財務",
+      "owner": "佐藤 美咲",
+      "stage": "分析中",
+      "progress": 68,
+      "interviews": 8,
+      "processes": 14,
+      "icon": "mdi-calculator-variant-outline",
+      "color": "#5b7cfa"
+    },
+    {
+      "id": "b4e18d62",
+      "name": "人事・総務",
+      "owner": "高橋 遼",
+      "stage": "調査中",
+      "progress": 44,
+      "interviews": 5,
+      "processes": 9,
+      "icon": "mdi-account-group-outline",
+      "color": "#c36d98"
+    },
+    {
+      "id": "2c8f5a97",
+      "name": "調達・購買",
+      "owner": "田中 直樹",
+      "stage": "To-Be設計",
+      "progress": 82,
+      "interviews": 11,
+      "processes": 18,
+      "icon": "mdi-cart-outline",
+      "color": "#d18145"
+    },
+    {
+      "id": "d16b40e3",
+      "name": "IT・情報システム",
+      "owner": "山本 健",
+      "stage": "調査中",
+      "progress": 36,
+      "interviews": 4,
+      "processes": 12,
+      "icon": "mdi-laptop",
+      "color": "#328b84"
+    }
+  ]
+}

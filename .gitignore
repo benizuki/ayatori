@@ -1,0 +1,24 @@
+node_modules/
+dist/
+.venv/
+.local-history/
+docs/
+.env
+__pycache__/
+*.py[cod]
+.DS_Store
+.ayatori-data/
+backend/app/data/*
+!backend/app/data/README.md
+scripts/gce/cos.env
+
+# デプロイ環境固有の設定を含むため、manifest/ 全体を公開対象から外す。
+manifest/
+Makefile
+cloudbuild.yaml
+
+.pytest_cache/
+.claude/
+
+security-report-ja.md
+seurity-report-external-ja.md

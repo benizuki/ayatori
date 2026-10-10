@@ -1,0 +1,24 @@
+{
+  "name": "ayatori-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test:improvement": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "vite": "^8.3.2",
+    "vue": "^3.5.43",
+    "vuetify": "^3.8.10"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.9",
+    "esbuild": "^0.28.2",
+    "typescript": "~5.8.3",
+    "vue-tsc": "^3.3.12"
+  }
+}

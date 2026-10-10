@@ -1,0 +1,156 @@
+[
+  {
+    "id": "tpl-purpose",
+    "name": "業務の目的・成果",
+    "description": "業務の目的、顧客、期待される成果物と品質基準を確認",
+    "required": true,
+    "questionCount": 4,
+    "category": "共通",
+    "answerType": "自由記述",
+    "keywords": [
+      "目的",
+      "顧客",
+      "成果物",
+      "品質"
+    ],
+    "source": "標準テンプレート",
+    "coverageKey": "purpose"
+  },
+  {
+    "id": "tpl-flow",
+    "name": "開始・終了と基本フロー",
+    "description": "開始条件から完了までを担当、操作、入出力の単位で確認",
+    "required": true,
+    "questionCount": 7,
+    "category": "共通",
+    "answerType": "自由記述",
+    "keywords": [
+      "開始条件",
+      "終了条件",
+      "手順",
+      "前後工程"
+    ],
+    "source": "標準テンプレート",
+    "coverageKey": "flow"
+  },
+  {
+    "id": "tpl-role",
+    "name": "担当・承認・責任分界",
+    "description": "実施者、承認者、関係部署、引き継ぎと責任分界を確認",
+    "required": true,
+    "questionCount": 5,
+    "category": "共通",
+    "answerType": "条件分岐",
+    "keywords": [
+      "担当者",
+      "承認者",
+      "関係部署",
+      "RACI"
+    ],
+    "source": "標準テンプレート",
+    "coverageKey": "role"
+  },
+  {
+    "id": "tpl-evidence",
+    "name": "入力・出力・証跡",
+    "description": "利用する帳票、ファイル、受領経路、成果物、保存ルールを確認",
+    "required": true,
+    "questionCount": 5,
+    "category": "共通",
+    "answerType": "ファイル・証跡",
+    "keywords": [
+      "帳票",
+      "ファイル",
+      "証跡",
+      "保存"
+    ],
+    "source": "標準テンプレート",
+    "coverageKey": "evidence"
+  },
+  {
+    "id": "tpl-system",
+    "name": "業務システム・周辺ツール",
+    "description": "業務システム、Excel・台帳、メール、ポータル、二重入力、システム間連携を確認",
+    "required": true,
+    "questionCount": 6,
+    "category": "共通",
+    "answerType": "自由記述",
+    "keywords": [
+      "業務システム",
+      "Excel",
+      "メール",
+      "二重入力",
+      "連携"
+    ],
+    "source": "標準テンプレート",
+    "coverageKey": "system"
+  },
+  {
+    "id": "tpl-volume",
+    "name": "件数・時間・繁閑",
+    "description": "処理件数、作業時間、待ち時間、締め日、繁忙期を確認",
+    "required": true,
+    "questionCount": 5,
+    "category": "共通",
+    "answerType": "数値",
+    "keywords": [
+      "件数",
+      "作業時間",
+      "待ち時間",
+      "繁忙期"
+    ],
+    "source": "標準テンプレート",
+    "coverageKey": "volume"
+  },
+  {
+    "id": "tpl-exception",
+    "name": "判断条件・例外処理",
+    "description": "分岐条件、例外の頻度、対応方法、差戻し、エスカレーションを確認",
+    "required": true,
+    "questionCount": 6,
+    "category": "共通",
+    "answerType": "条件分岐",
+    "keywords": [
+      "判断条件",
+      "例外",
+      "差戻し",
+      "エスカレーション"
+    ],
+    "source": "標準テンプレート",
+    "coverageKey": "exception"
+  },
+  {
+    "id": "tpl-control",
+    "name": "統制・権限・リスク",
+    "description": "承認統制、職務分掌、アクセス権、監査対応、禁止事項を確認",
+    "required": false,
+    "questionCount": 5,
+    "category": "共通",
+    "answerType": "ファイル・証跡",
+    "keywords": [
+      "統制",
+      "権限",
+      "監査",
+      "職務分掌"
+    ],
+    "source": "標準テンプレート",
+    "coverageKey": "control"
+  },
+  {
+    "id": "tpl-issue",
+    "name": "課題・改善アイデア",
+    "description": "困りごと、原因、影響、暫定対応、改善案と自動化制約を確認",
+    "required": true,
+    "questionCount": 5,
+    "category": "共通",
+    "answerType": "自由記述",
+    "keywords": [
+      "課題",
+      "原因",
+      "影響",
+      "改善案"
+    ],
+    "source": "標準テンプレート",
+    "coverageKey": "issue"
+  }
+]

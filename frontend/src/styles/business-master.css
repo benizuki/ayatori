@@ -1,0 +1,102 @@
+/* 業務マスター画面の配置。FullHD（1920×1080）で、ヘッダーを1行に収め、
+   3つのペインを残りの高さいっぱいに使う。入力欄は2段組、長い区画はタブで切り替える。 */
+.master-page { padding-top: 20px; padding-bottom: 24px; }
+
+/* ---- ヘッダー（見出し・統計・操作を1行に） ---- */
+.bm-bar { display: flex; align-items: center; gap: 16px; min-height: 48px; margin-bottom: 12px; }
+.bm-bar h1 { margin: 0; color: var(--ink-1); font-size: 22px; line-height: 1.2; letter-spacing: -.4px; white-space: nowrap; }
+.bm-bar .heading-actions { margin-left: auto; }
+.bm-bar__hint { display: grid; place-items: center; width: 28px; height: 28px; color: var(--ink-7); cursor: help; }
+.bm-stats { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.bm-stats li { display: flex; align-items: center; gap: 7px; padding: 6px 13px; border: 1px solid var(--border-default); border-radius: 999px; background: var(--surface-card); color: var(--ink-6); font-size: 13px; white-space: nowrap; }
+.bm-stats b { color: var(--ink-2); font-size: 16px; }
+.bm-stats .v-icon { color: #5d75c8; }
+.bm-stats__mint .v-icon { color: var(--text-brand); }
+.bm-stats__orange .v-icon { color: var(--text-warn-strong); }
+
+/* ---- 作業領域：左の一覧（業務領域のチップ＋業務一覧）と右の編集 ---- */
+.bm-workspace { display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 12px; height: calc(100vh - 221px); min-height: 560px; }
+.bm-side { display: flex; flex-direction: column; min-width: 0; min-height: 0; overflow: hidden; }
+.bm-areas { display: flex; flex-wrap: wrap; gap: 6px; padding: 12px 12px 8px; border-bottom: 1px solid var(--border-default); }
+.bm-areas button { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 10px; border: 1px solid var(--border-default); border-radius: 999px; background: var(--surface-card); color: var(--ink-5); font-size: 13px; font-weight: 600; cursor: pointer; transition: .15s; }
+.bm-areas button:hover { border-color: var(--border-mid); background: var(--surface-subtle); }
+.bm-areas button.active { border-color: var(--border-brand-strong); background: var(--surface-accent); color: var(--text-brand-strong); }
+.bm-areas em { display: grid; place-items: center; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 10px; background: var(--surface-muted); color: var(--ink-7); font-size: 12px; font-style: normal; }
+.bm-areas button.active em { background: var(--surface-raised); color: var(--text-brand-strong); }
+.bm-areas__empty { color: var(--ink-8); font-size: 13px; }
+.bm-areas-select { margin: 12px 12px 4px; }
+.bm-side .catalog-list { flex: 1; height: auto; min-height: 0; }
+.bm-side .master-pane-title, .bm-side .master-search-field { flex: none; }
+
+/* ---- 右：編集 ---- */
+.bm-editor { min-width: 0; container-type: inline-size; }
+.master-page .bm-editor .master-editor__header { height: auto; min-height: 64px; flex-direction: row; align-items: center; gap: 12px; padding: 10px 16px; }
+.master-page .bm-editor .editor-actions { width: auto; flex-shrink: 0; align-items: center; }
+.bm-more-button { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid var(--border-muted); border-radius: 8px; background: var(--surface-card); color: var(--ink-5); cursor: pointer; }
+.bm-more-button:hover { background: var(--surface-subtle); }
+.bm-more-menu { min-width: 150px; padding: 6px; border: 1px solid var(--border-default); border-radius: 10px; background: var(--surface-card); box-shadow: 0 8px 24px rgba(58, 46, 36, .14); }
+.bm-more-menu .delete-business-button { width: 100%; height: 36px; display: flex; align-items: center; gap: 6px; padding: 0 10px; border-radius: 7px; font-size: 13px; font-weight: 600; cursor: pointer; }
+
+.bm-tabs { display: flex; align-items: center; gap: 2px; padding: 0 14px; border-bottom: 1px solid var(--border-default); }
+.bm-tabs button { display: flex; align-items: center; gap: 7px; height: 46px; padding: 0 14px; border: 0; border-bottom: 2px solid transparent; background: none; color: var(--ink-6); font-size: 14px; font-weight: 600; cursor: pointer; }
+.bm-tabs button:hover { color: var(--ink-3); }
+.bm-tabs button.active { border-bottom-color: var(--surface-accent-solid); color: var(--text-brand-strong); }
+.bm-tabs em { display: grid; place-items: center; min-width: 20px; height: 20px; padding: 0 6px; border-radius: 10px; background: var(--surface-muted); color: var(--ink-7); font-size: 12px; font-style: normal; }
+.bm-tabs button.active em { background: var(--surface-accent); color: var(--text-brand-strong); }
+.bm-tabs__meta { margin-left: auto; color: var(--ink-8); font-size: 13px; }
+.bm-body { padding: 18px 20px 24px; }
+
+/* 基本情報：短い項目は1行に並べ、説明と条件は左右に置く */
+.bm-form { display: grid; gap: 14px; }
+.bm-form .master-provenance { margin-bottom: 0; }
+.bm-form__ids { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.bm-form__text { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 12px; align-items: start; }
+.bm-form__conditions { display: grid; gap: 12px; }
+.bm-form textarea { font-size: 14px; line-height: 1.65; }
+@container (max-width: 720px) {
+  .bm-form__ids { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@container (max-width: 900px) {
+  .bm-form__text { grid-template-columns: minmax(0, 1fr); }
+}
+@container (max-width: 640px) {
+  .bm-form__ids { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* 業務間の関連・As-Is */
+.bm-relations .business-relation-editor { margin: 0; }
+.bm-asis { display: grid; gap: 12px; }
+.bm-asis__state { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px 14px; border-left: 3px solid var(--hue-violet-line); border-radius: 9px; background: var(--hue-violet-soft); color: var(--ink-6); font-size: 13px; }
+.bm-asis__state b { color: var(--hue-violet-ink); font-size: 14px; }
+.bm-asis__review-status { margin-left: auto; color: var(--hue-violet-ink); font-size: 13px; font-style: normal; font-weight: 700; }
+.bm-asis .asis-master-note { margin-top: 0; }
+.bm-asis__cols { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 12px; align-items: start; margin-top: 12px; }
+.bm-asis__cols .asis-master-flow, .bm-asis__cols .asis-master-assets, .bm-asis__cols .asis-master-review { margin-top: 0; }
+.bm-asis__side { display: grid; gap: 12px; }
+.bm-asis__cols--single { grid-template-columns: minmax(0, 1fr); }
+@container (max-width: 900px) {
+  .bm-asis__cols { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 1100px) {
+  .bm-workspace { grid-template-columns: 260px minmax(0, 1fr); }
+}
+@media (max-width: 780px) {
+  .bm-bar { flex-wrap: wrap; }
+  .bm-bar .heading-actions { width: 100%; margin-left: 0; }
+  .bm-workspace { display: block; height: auto; }
+  .bm-side { max-height: 380px; margin-bottom: 12px; }
+  .master-page .bm-editor .master-editor__header { flex-direction: column; align-items: flex-start; }
+  .master-page .bm-editor .editor-actions { width: 100%; flex-wrap: wrap; }
+  .bm-tabs { overflow-x: auto; }
+}
+
+@container (max-width: 860px) {
+  .master-page .bm-editor .master-editor__header { flex-direction: column; align-items: stretch; }
+  .master-page .bm-editor .editor-actions { width: 100%; flex-wrap: wrap; }
+}
+
+.bm-tabs button { white-space: nowrap; }
+.bm-bar { flex-wrap: wrap; }
+.bm-bar .heading-actions { flex-wrap: wrap; margin-left: auto; }
+.bm-side .catalog-item__top { justify-content: flex-end; }

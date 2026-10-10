@@ -1,0 +1,96 @@
+[
+  {
+    "id": "start",
+    "label": "請求書受領",
+    "actor": "取引先",
+    "type": "start",
+    "x": 65,
+    "y": 92
+  },
+  {
+    "id": "receive",
+    "label": "受付・PDF化",
+    "actor": "経理担当",
+    "type": "task",
+    "x": 155,
+    "y": 72,
+    "width": 136,
+    "duration": "15分/件",
+    "system": "紙・Scanner",
+    "risk": "medium"
+  },
+  {
+    "id": "register",
+    "label": "台帳へ転記",
+    "actor": "経理担当",
+    "type": "task",
+    "x": 345,
+    "y": 72,
+    "width": 128,
+    "duration": "5分/件",
+    "system": "Excel",
+    "risk": "high"
+  },
+  {
+    "id": "match",
+    "label": "発注番号あり？",
+    "actor": "経理担当",
+    "type": "gateway",
+    "x": 535,
+    "y": 91,
+    "risk": "medium"
+  },
+  {
+    "id": "sap",
+    "label": "3点照合",
+    "actor": "経理担当",
+    "type": "task",
+    "x": 665,
+    "y": 72,
+    "width": 120,
+    "duration": "8分/件",
+    "system": "SAP"
+  },
+  {
+    "id": "approve",
+    "label": "支払承認",
+    "actor": "部門長",
+    "type": "task",
+    "x": 840,
+    "y": 72,
+    "width": 116,
+    "duration": "1.8日",
+    "system": "SAP"
+  },
+  {
+    "id": "end",
+    "label": "計上",
+    "actor": "経理担当",
+    "type": "end",
+    "x": 1015,
+    "y": 92
+  },
+  {
+    "id": "inquiry",
+    "label": "部門へ確認メール",
+    "actor": "申請部門",
+    "type": "task",
+    "x": 525,
+    "y": 220,
+    "width": 145,
+    "duration": "2.4日",
+    "system": "Outlook",
+    "risk": "high"
+  },
+  {
+    "id": "reply",
+    "label": "発注情報を回答",
+    "actor": "申請部門",
+    "type": "task",
+    "x": 735,
+    "y": 220,
+    "width": 145,
+    "duration": "0.8日",
+    "system": "メール"
+  }
+]

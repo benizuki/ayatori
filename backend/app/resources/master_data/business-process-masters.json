@@ -1,0 +1,394 @@
+[
+  {
+    "id": "ap-invoice",
+    "code": "FIN-AP-010",
+    "name": "請求書処理",
+    "departmentId": "7f3a9c21",
+    "category": "買掛金管理",
+    "description": "請求書の受領から発注・検収情報との照合、支払承認、会計計上までを行う。",
+    "startCondition": "取引先から請求書を受領",
+    "endCondition": "支払予定を確定しSAPへ計上",
+    "sapScope": "拡張",
+    "sapModule": "SAP FI / MM",
+    "ownerRole": "買掛金チームリーダー",
+    "status": "作成完了",
+    "updatedAt": "2026-07-18 14:32",
+    "interviewTopics": [
+      {
+        "id": "purpose",
+        "name": "業務の目的・成果",
+        "description": "業務の目的、顧客、期待される成果を確認",
+        "required": true,
+        "questionCount": 4,
+        "category": "共通"
+      },
+      {
+        "id": "flow",
+        "name": "基本フロー",
+        "description": "開始から終了までを担当・操作・入出力で分解",
+        "required": true,
+        "questionCount": 8,
+        "category": "共通"
+      },
+      {
+        "id": "channel",
+        "name": "請求書の受付経路",
+        "description": "紙、メール、ポータルなど経路別の比率を確認",
+        "required": true,
+        "questionCount": 3,
+        "category": "業務固有"
+      },
+      {
+        "id": "exception",
+        "name": "例外・イレギュラー",
+        "description": "発生条件、頻度、対応、エスカレーションを確認",
+        "required": true,
+        "questionCount": 6,
+        "category": "共通"
+      },
+      {
+        "id": "volume",
+        "name": "業務量・所要時間",
+        "description": "件数、処理時間、待ち時間、繁閑差を確認",
+        "required": true,
+        "questionCount": 5,
+        "category": "共通"
+      },
+      {
+        "id": "three-way",
+        "name": "3点照合と不一致処理",
+        "description": "発注・検収・請求の照合ルールと不一致時の処理",
+        "required": true,
+        "questionCount": 5,
+        "category": "業務固有"
+      },
+      {
+        "id": "evidence",
+        "name": "帳票・証跡・統制",
+        "description": "利用ファイル、承認証跡、保存ルールを確認",
+        "required": false,
+        "questionCount": 4,
+        "category": "共通"
+      },
+      {
+        "id": "issue",
+        "name": "課題・改善アイデア",
+        "description": "困りごと、原因、影響、改善案を確認",
+        "required": true,
+        "questionCount": 5,
+        "category": "共通"
+      }
+    ]
+  },
+  {
+    "id": "expense",
+    "code": "FIN-EX-030",
+    "name": "経費精算",
+    "departmentId": "7f3a9c21",
+    "category": "従業員経費",
+    "description": "従業員の経費申請から上長承認、内容審査、支払までを行う。",
+    "startCondition": "従業員が経費を申請",
+    "endCondition": "精算金の支払完了",
+    "sapScope": "標準",
+    "sapModule": "SAP Concur / FI",
+    "ownerRole": "経費管理担当",
+    "status": "作成中",
+    "updatedAt": "2026-07-12 17:05",
+    "interviewTopics": [
+      {
+        "id": "purpose",
+        "name": "業務の目的・成果",
+        "description": "目的と利用者を確認",
+        "required": true,
+        "questionCount": 4,
+        "category": "共通"
+      },
+      {
+        "id": "flow",
+        "name": "基本フロー",
+        "description": "申請から支払までを確認",
+        "required": true,
+        "questionCount": 8,
+        "category": "共通"
+      },
+      {
+        "id": "policy",
+        "name": "経費規程と審査",
+        "description": "規程、違反判定、審査方法を確認",
+        "required": true,
+        "questionCount": 6,
+        "category": "業務固有"
+      }
+    ]
+  },
+  {
+    "id": "purchase-order",
+    "code": "PRC-PO-010",
+    "name": "購買申請・発注",
+    "departmentId": "2c8f5a97",
+    "category": "ソーシング・購買",
+    "description": "購買依頼から見積、サプライヤー選定、承認、発注までを行う。",
+    "startCondition": "購買依頼の登録",
+    "endCondition": "発注書の送付",
+    "sapScope": "標準",
+    "sapModule": "SAP MM / Ariba",
+    "ownerRole": "購買オペレーション担当",
+    "status": "作成完了",
+    "updatedAt": "2026-07-17 16:10",
+    "interviewTopics": [
+      {
+        "id": "flow",
+        "name": "基本フロー",
+        "description": "申請から発注までを確認",
+        "required": true,
+        "questionCount": 8,
+        "category": "共通"
+      },
+      {
+        "id": "supplier",
+        "name": "サプライヤー選定",
+        "description": "見積・選定基準を確認",
+        "required": true,
+        "questionCount": 6,
+        "category": "業務固有"
+      },
+      {
+        "id": "approval",
+        "name": "承認ルール",
+        "description": "金額・品目別の承認経路を確認",
+        "required": true,
+        "questionCount": 5,
+        "category": "業務固有"
+      }
+    ]
+  },
+  {
+    "id": "receiving-inspection",
+    "code": "PRC-GR-040",
+    "name": "納品・検収管理",
+    "departmentId": "2c8f5a97",
+    "category": "ソーシング・購買",
+    "description": "納品予定の確認、受領、検収、差異確認、支払・在庫への連携までを行う。",
+    "startCondition": "発注済み案件の納品予定日到来",
+    "endCondition": "検収完了と支払・在庫への連携",
+    "sapScope": "標準",
+    "sapModule": "SAP MM",
+    "ownerRole": "倉庫・受入担当",
+    "status": "作成完了",
+    "updatedAt": "2026-07-17 09:45",
+    "interviewTopics": [
+      {
+        "id": "flow",
+        "name": "基本フロー",
+        "description": "受付から払い出しまでを確認",
+        "required": true,
+        "questionCount": 7,
+        "category": "共通"
+      },
+      {
+        "id": "inspection-rule",
+        "name": "検収基準",
+        "description": "数量・品質・外観の確認方法と、検収を誰が判断するか",
+        "required": true,
+        "questionCount": 5,
+        "category": "業務固有"
+      },
+      {
+        "id": "discrepancy",
+        "name": "納品差異の処理",
+        "description": "過不足・不良品・誤納品の発生頻度と返品・再納品の流れ",
+        "required": true,
+        "questionCount": 5,
+        "category": "業務固有"
+      },
+      {
+        "id": "volume",
+        "name": "業務量・所要時間",
+        "description": "件数、処理時間、待ち時間、繁閑差を確認",
+        "required": true,
+        "questionCount": 5,
+        "category": "共通"
+      }
+    ]
+  },
+  {
+    "id": "onboarding",
+    "code": "HR-EM-010",
+    "name": "入社手続き",
+    "departmentId": "b4e18d62",
+    "category": "従業員管理",
+    "description": "内定承諾後の情報収集、アカウント・備品・社会保険等の準備を行う。",
+    "startCondition": "入社予定者の確定",
+    "endCondition": "入社初日の手続き完了",
+    "sapScope": "拡張",
+    "sapModule": "SAP SuccessFactors",
+    "ownerRole": "人事オペレーション担当",
+    "status": "作成完了",
+    "updatedAt": "2026-07-16 11:40",
+    "interviewTopics": [
+      {
+        "id": "flow",
+        "name": "基本フロー",
+        "description": "関係部署を含む準備フローを確認",
+        "required": true,
+        "questionCount": 9,
+        "category": "共通"
+      },
+      {
+        "id": "personal-data",
+        "name": "個人情報の収集",
+        "description": "収集経路、保管、アクセス権を確認",
+        "required": true,
+        "questionCount": 6,
+        "category": "業務固有"
+      },
+      {
+        "id": "exception",
+        "name": "例外・イレギュラー",
+        "description": "入社日変更等を確認",
+        "required": true,
+        "questionCount": 5,
+        "category": "共通"
+      }
+    ]
+  },
+  {
+    "id": "hr-offboarding",
+    "code": "HR-EM-020",
+    "name": "退社手続き",
+    "departmentId": "b4e18d62",
+    "category": "従業員管理",
+    "description": "退職申請の受付、貸与物返却、アカウント停止、精算、証明書発行までを行う。",
+    "startCondition": "退職の申し出または退職日の確定",
+    "endCondition": "返却・精算・証明書発行の完了",
+    "sapScope": "拡張",
+    "sapModule": "SAP SuccessFactors / HCM",
+    "ownerRole": "人事オペレーション担当",
+    "status": "作成完了",
+    "updatedAt": "2026-07-15 10:20",
+    "interviewTopics": [
+      {
+        "id": "flow",
+        "name": "基本フロー",
+        "description": "受付から払い出しまでを確認",
+        "required": true,
+        "questionCount": 7,
+        "category": "共通"
+      },
+      {
+        "id": "return-items",
+        "name": "貸与物の回収",
+        "description": "PC・入館証・社用携帯など貸与物の把握方法と回収漏れ時の対応",
+        "required": true,
+        "questionCount": 4,
+        "category": "業務固有"
+      },
+      {
+        "id": "account-stop",
+        "name": "アカウント停止の連携",
+        "description": "人事からIT・総務への連絡経路、停止のタイミングと確認方法",
+        "required": true,
+        "questionCount": 5,
+        "category": "業務固有"
+      },
+      {
+        "id": "exception",
+        "name": "例外・緊急申請",
+        "description": "緊急時の統制を確認",
+        "required": true,
+        "questionCount": 5,
+        "category": "業務固有"
+      }
+    ]
+  },
+  {
+    "id": "account-request",
+    "code": "IT-IAM-010",
+    "name": "アカウント申請",
+    "departmentId": "d16b40e3",
+    "category": "ID管理",
+    "description": "利用者からの申請に基づき、各システムのアカウントと権限を払い出す。",
+    "startCondition": "利用申請の承認",
+    "endCondition": "利用者への払い出し通知",
+    "sapScope": "周辺",
+    "sapModule": "対象外",
+    "ownerRole": "ID管理担当",
+    "status": "作成完了",
+    "updatedAt": "2026-07-14 13:25",
+    "interviewTopics": [
+      {
+        "id": "flow",
+        "name": "基本フロー",
+        "description": "受付から払い出しまでを確認",
+        "required": true,
+        "questionCount": 7,
+        "category": "共通"
+      },
+      {
+        "id": "role",
+        "name": "権限・ロール設計",
+        "description": "付与基準と職務分掌を確認",
+        "required": true,
+        "questionCount": 7,
+        "category": "業務固有"
+      },
+      {
+        "id": "exception",
+        "name": "例外・緊急申請",
+        "description": "緊急時の統制を確認",
+        "required": true,
+        "questionCount": 5,
+        "category": "業務固有"
+      }
+    ]
+  },
+  {
+    "id": "helpdesk-management",
+    "code": "IT-SD-040",
+    "name": "問い合わせ・ヘルプデスク対応",
+    "departmentId": "d16b40e3",
+    "category": "IT運用",
+    "description": "問い合わせ受付、一次切り分け、対応、エスカレーション、ナレッジ化までを行う。",
+    "startCondition": "利用者からの問い合わせ受付",
+    "endCondition": "解決連絡とナレッジ登録の完了",
+    "sapScope": "周辺",
+    "sapModule": "対象外",
+    "ownerRole": "サービスデスク担当",
+    "status": "作成完了",
+    "updatedAt": "2026-07-13 15:30",
+    "interviewTopics": [
+      {
+        "id": "flow",
+        "name": "基本フロー",
+        "description": "受付から払い出しまでを確認",
+        "required": true,
+        "questionCount": 7,
+        "category": "共通"
+      },
+      {
+        "id": "intake",
+        "name": "受付経路と記録",
+        "description": "電話・メール・チャットなど受付経路別の件数と、チケット化の有無",
+        "required": true,
+        "questionCount": 4,
+        "category": "業務固有"
+      },
+      {
+        "id": "escalation",
+        "name": "エスカレーション",
+        "description": "二次対応・ベンダーへ回す基準と、回答待ちの追跡方法",
+        "required": true,
+        "questionCount": 5,
+        "category": "業務固有"
+      },
+      {
+        "id": "issue",
+        "name": "課題・改善アイデア",
+        "description": "困りごと、原因、影響、改善案を確認",
+        "required": true,
+        "questionCount": 5,
+        "category": "共通"
+      }
+    ]
+  }
+]

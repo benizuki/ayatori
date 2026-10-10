@@ -1,0 +1,34 @@
+# ローカルで手早く動かすための構成（この端末のみ）。`docker compose up --build` で
+# http://127.0.0.1:8000/ に画面と API が立ち上がる。
+#
+# - ログイン画面でメールアドレスを入れるだけで入れる（お試しログイン）。
+#   最初に入ったメールアドレスは全体管理者になり、以降は一般利用者になる。
+# - パスワードも Google の確認も無いため、他の人に公開する用途には使わないこと。
+#   バックエンドは AYATORI_API_HOST=127.0.0.1 のときだけこのモードを許すため、
+#   公開ポートも 127.0.0.1 に限定して同じ前提を保つ（コンテナ内は 0.0.0.0 で待ち受ける）。
+# - Vertex AI を使う場合は `gcloud auth application-default login` を済ませ、
+#   .env に GOOGLE_CLOUD_PROJECT などを書く。
+services:
+  ayatori:
+    build: .
+    image: ayatori:local
+    ports:
+      - "127.0.0.1:8000:8080"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      AYATORI_API_HOST: 127.0.0.1
+      # .env に値があっても、このお試し版では Google ログインを使わない。
+      GOOGLE_OAUTH_CLIENT_ID: ""
+      # メールアドレスだけで入れるお試しログイン。
+      AYATORI_DEMO_LOGIN: "1"
+      # ADC（application_default_credentials.json）をこのディレクトリから探す。
+      CLOUDSDK_CONFIG: /gcloud
+    volumes:
+      - ayatori-data:/app/data
+      - ${HOME}/.config/gcloud:/gcloud:ro
+    restart: unless-stopped
+
+volumes:
+  ayatori-data:
